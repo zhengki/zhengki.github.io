@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<%- include("../public/head.ejs",{
+title:"资金详情"
+}) %>
+<link rel="stylesheet" href="../../css/financing/money-details.css">
+
+
+</head>
+
+<body>
+<%- include("../public/header.ejs",{active:1}) %>
+<div class="content">
+    <div class="breadcrumb">
+        <span class="layui-breadcrumb">
+            <a href="../../views/index/index.html">首页</a>
+            <a href="../../views/financing/money-souce.html">资金</a>
+            <a href="#">资金详情</a>
+        </span>
+    </div>
+    <div class="side-left">
+        <div class="money-details">
+            <div class="details-title">
+                <div>四川某投资公司1000万元寻项目合作</div>
+                <ul>
+                    <li>浏览<span>（150）</span></li>
+                    <li>关注<span>（150）</span></li>
+                    <li>约谈<span>（50）</span></li>
+                </ul>
+            </div>
+            <div class="details">
+                <img src="../../images/banner.png" alt="" class="money-img">
+                <img src="../../images/lab_aut.png" alt="" class="icon-img">
+                <div class="details-info">
+                    <ul>
+                        <li>所在地区：<span>四川成都</span></li>
+                        <li>投资行业：<span>建筑建材</span></li>
+                        <li>资金主体：<span>企业资金</span></li>
+                        <li>资金所属权：<span>自有资金</span></li>
+                        <li>投资方式：<span>股权融资</span></li>
+                        <li>投资金额：<span>1000万元</span></li>
+                        <li>投资期限：<span>2年</span></li>
+                        <li>风控要求：<span>股权质押</span></li>
+                    </ul>
+                    <a href="" class="layui-btn">我要约谈</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="money-intro">
+            <div class="intro-title"><span>资金介绍</span></div>
+            <div class="intro">
+
+            </div>
+        </div>
+    </div>
+    <div class="side-right">
+        <div class="card">
+            <div class="title"><span>会员名片</span></div>
+            <div class="card-details">
+                <img src="../../images/banner.png" alt="">
+                <ul>
+                    <li>王先生</li>
+                    <li>公司：<span>四川某民营企业</span></li>
+                    <li>职位：<span>总经理</span></li>
+                    <li>联系电话：<span>***********</span></li>
+                    <li><a href="" class="layui-btn">查看完整联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="money">
+            <div class="title"><span>推荐资金</span></div>
+            <ul>
+                <li>
+                    <a href="../../views/financing/money-details.html">
+                        <div class="project-item">
+                            <div class="imgs">
+                                <img src="../../images/banner.png" alt="" class="project-img">
+                                <img src="../../images/lab_aut.png" alt="" class="icon-img">
+                            </div>
+                            <div class="item-title">四川某投资公司寻项目合作</div>
+                            <div class="item-details">
+                                <div><span class="area">四川 成都</span>发布方：<span>四川某企业</span></div>
+                                <div>融资金额<span class="money">1000万元</span>债权融资</div>
+                                <div>浏览：<span class="font-red">100</span>关注：<span class="font-red">100</span>约谈：<span class="font-red">100</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../../views/financing/money-details.html">
+                        <div class="project-item">
+                            <div class="imgs">
+                                <img src="../../images/banner.png" alt="" class="project-img">
+                                <img src="../../images/lab_aut.png" alt="" class="icon-img">
+                            </div>
+                            <div class="item-title">四川某投资公司寻项目合作</div>
+                            <div class="item-details">
+                                <div><span class="area">四川 成都</span>发布方：<span>四川某企业</span></div>
+                                <div>融资金额<span class="money">1000万元</span>债权融资</div>
+                                <div>浏览：<span class="font-red">100</span>关注：<span class="font-red">100</span>约谈：<span class="font-red">100</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<%- include("../public/footer.ejs") %>
+</body>
+
+</html>

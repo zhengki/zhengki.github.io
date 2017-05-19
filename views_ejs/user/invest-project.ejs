@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<%- include("../public/head.ejs",{
+title:"首页"
+}) %>
+<link rel="stylesheet" href="../../css/user/invest-project.css">
+
+
+</head>
+
+<body>
+<%- include("../public/header.ejs",{active:0}) %>
+    <div class="content">
+        <span class="layui-breadcrumb">
+            <a href="../../views/index/index.html">首页</a>
+            <a href="#">会员中心</a>
+        </span>
+        <div class="clearboth">
+            <%- include("../public/sideBarLeft.ejs",{active:[1,1]}) %>
+            <div class="sideBarRight pull-left">
+                <div class="talk-nav">
+                    <span class=" first"><a href="../../views/user/noapprove-money.html">我发布的资金</a></span>
+                    <span class="active"><a href="#">我投资的项目</a></span>
+                </div>
+                <div class="project">
+                    <table class="layui-table" lay-skin="line">
+                        <colgroup>
+                            <col >
+                            <col >
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>项目名称</th>
+                            <th>投资时间</th>
+                            <th>投资金额</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="">四川某股权投资项目</a></td>
+                            <td><a href="">2016-11-29</a></td>
+                            <td><a href="">1000万元</a></td>
+                            <td><a href="">已签约</a></td>
+                            <td ><a href="../../views/financing/project-details.html" class="btn">查看详情</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">四川某股权投资项目</a></td>
+                            <td><a href="">2016-11-29</a></td>
+                            <td><a href="">1000万元</a></td>
+                            <td><a href="">已签约</a></td>
+                            <td ><a href="../../views/financing/project-details.html" class="btn">查看详情</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page">
+                    <ul>
+                        <li class="pre">上一页</li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li class="no-border">...</li>
+                        <li>34</li>
+                        <li class="next">下一页</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<%- include("../public/footer.ejs") %>
+</body>
+
+</html>

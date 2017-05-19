@@ -1,0 +1,149 @@
+@import "../index/index";
+  .content{
+    width: 1174px;
+    margin: 0 auto;
+    .breadcrumb{
+      margin: 10px 0;
+    }
+    .clearboth{
+      clear: both;
+      overflow: hidden;
+    }
+    .sideBarLeft{
+      margin-top: 7px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      width:240px;
+      background-color: #E7F1F9;
+      span{
+        margin-left: 40px;
+        font-size: 20px;
+      }
+      ul{
+        margin-top: 15px;
+        width: 240px;
+        text-align: center;
+      }
+      li{
+        font-size: 18px;
+        height: 58px;
+        line-height: 58px;
+      }
+      .account-manage,.bussiness-manage,.member-serve{
+        padding-top: 17px;
+      }
+      .bussiness-manage{
+        border-top: 2px solid #CCD8E2;
+        border-bottom: 2px solid #CCD8E2;
+      }
+      li.active{
+        background-color: #fff;
+        border-left: 3px solid #1284E0;
+        a{
+          color: #1284E0;
+        }
+      }
+
+
+    }
+    .sideBarRight{
+      width:914px;
+      height: 760px;
+      margin-top: 7px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      .talk-nav{
+        height: 58px;
+        line-height: 58px;
+        span{
+          font-size: 16px;
+          text-align: center;
+          display: inline-block;
+          margin-right: 50px;
+          height: 58px;
+          width: 175px;
+        }
+        span.first{
+          margin-left: 30px;
+        }
+        span.active{
+          border-bottom: 3px solid #1284E0;
+        }
+      }
+      .talk-nav:after{
+        content: '';
+        height: 1px;
+        display: block;
+        background-color: #CCD8E2;
+      }
+      .project {
+        width: 855px;
+        margin: 0 auto;
+        margin-top: 30px;
+        .layui-form{
+          .layui-btn{
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            background-color:#1284E0 ;
+            margin-top: 66px;
+            margin-left: 300px;
+          }
+          div.font-red{
+            padding-left: 180px;
+          }
+          .layui-form-item{
+            margin-bottom: 30px;
+          }
+
+          .images{
+            .hidden{
+              display: none;
+            }
+            div{
+              display: inline-block;
+              //border: 1px solid #eee;
+              width: 180px;
+              height: 80px;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+            button{
+              margin-left: 30px;
+              display: inline-block;
+              border: 1px solid #eee;
+              width: 80px;
+              height: 30px;
+              line-height: 30px;
+              background-color: #fff;
+            }
+          }
+          .duty{
+            input{
+              width: 300px;
+              height: 40px;
+            }
+          }
+          .linkman{
+            position: relative;
+            .man{
+              position: absolute;
+              top: 0;
+              left: 270px;
+            }
+            input{
+              width: 150px;
+              height: 40px;
+            }
+
+          }
+          .layui-form-label{
+            width: 150px;
+          }
+        }
+      }
+
+    }
+  }

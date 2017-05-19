@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<%- include("../public/head.ejs",{
+title:"收到的约谈"
+}) %>
+<link rel="stylesheet" href="../../css/user/my-receive-talk.css">
+
+
+</head>
+
+<body>
+<%- include("../public/header.ejs",{active:0}) %>
+    <div class="content">
+        <span class="layui-breadcrumb">
+            <a href="../../views/index/index.html">首页</a>
+            <a href="#">会员中心</a>
+        </span>
+        <div class="clearboth">
+            <%- include("../public/sideBarLeft.ejs",{active:[2,1]}) %>
+            <div class="sideBarRight pull-left">
+                <div class="talk-nav">
+                    <span class="first"><a href="../../views/user/my-sponsor-project-talk.html">发起的约谈</a></span>
+                    <span class="active"><a href="#">收到的约谈</a></span>
+                </div>
+                <!--<div class="talk-list">-->
+                    <!--<span class="talk-ltem active"><a href="">项目约谈</a></span>-->
+                    <!--<span class="talk-item"><a href="">资金约谈</a></span>-->
+                <!--</div>-->
+                <div class="project">
+                    <p>你总共收到<span class="num">2</span>个项目约谈。</p>
+                    <div class="project-item clearboth">
+                        <img src="../../images/weibo.jpg" alt="" class="pull-left">
+                        <div class="pull-left project-item-details">
+                            <div class="item-details customer">王先生</div>
+                            <div class="item-details"><span>四川某民营企业</span><i>|</i><span>总经理</span></div>
+                            <div class="item-details">联系方式：<span>**********</span></div>
+                        </div>
+                        <div class="pull-left project-date">
+                            <span class="pull-left">2016-06-20</span>
+                            <span class="pull-right"><a href="" >发送名片</a></span>
+                        </div>
+                    </div>
+                    <div class="project-item clearboth">
+                        <img src="../../images/weibo.jpg" alt="" class="pull-left">
+                        <div class="pull-left project-item-details">
+                            <div class="item-details customer">王先生</div>
+                            <div class="item-details"><span>四川某民营企业</span><i>|</i><span>总经理</span></div>
+                            <div class="item-details">联系方式：<span>**********</span></div>
+                        </div>
+                        <div class="pull-left project-date">
+                            <span class="pull-left">2016-06-20</span>
+                            <span class="pull-right"><a href="" >发送名片</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <ul>
+                        <li class="pre">上一页</li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li class="no-border">...</li>
+                        <li>34</li>
+                        <li class="next">下一页</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<%- include("../public/footer.ejs") %>
+</body>
+
+</html>

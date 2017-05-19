@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<%- include("../public/head.ejs",{
+title:"我发布的已认证资金"
+}) %>
+<link rel="stylesheet" href="../../css/user/approve-money.css">
+
+
+</head>
+
+<body>
+<%- include("../public/header.ejs",{active:0}) %>
+    <div class="content">
+        <span class="layui-breadcrumb">
+            <a href="../../views/index/index.html">首页</a>
+            <a href="#">会员中心</a>
+        </span>
+        <div class="clearboth">
+            <%- include("../public/sideBarLeft.ejs",{active:[1,1]}) %>
+            <div class="sideBarRight pull-left">
+                <div class="talk-nav">
+                    <span class="active first"><a href="#">我发布的资金</a></span>
+                    <span class=""><a href="../../views/user/invest-project.html">我投资的项目</a></span>
+                </div>
+                <div class="talk-list">
+                    <span class="talk-ltem "><a href="../../views/user/noapprove-money.html">未认证资金</a></span>
+                    <span class="talk-item active"><a href="#">已认证资金</a></span>
+                    <a href="../../views/user/release-money.html" class="layui-btn pull-right">我要发布</a>
+                </div>
+                <div class="project">
+                    <table class="layui-table" lay-skin="line">
+                        <colgroup>
+                            <col >
+                            <col >
+                            <col>
+
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>资金名称</th>
+                            <th>发布时间</th>
+                            <th>资金状态</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="../../views/financing/money-details.html">四川某股权投资项目1000万元寻项目合作</a></td>
+                            <td>2016-11-29</td>
+                            <td>认证通过</td>
+                        </tr>
+                        <tr>
+                            <td><a href="../../views/financing/money-details.html">四川某股权投资项目1000万元寻项目合作</a></td>
+                            <td>2016-11-29</td>
+                            <td>认证通过</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page">
+                    <ul>
+                        <li class="pre">上一页</li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li class="no-border">...</li>
+                        <li>34</li>
+                        <li class="next">下一页</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<%- include("../public/footer.ejs") %>
+</body>
+
+</html>

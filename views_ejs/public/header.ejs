@@ -1,0 +1,71 @@
+<header class="normal-container" style="background-color:#F1F1F1;">
+    <div class="container top-header-box">
+        <div class="top-header-left-part">
+            <span>客服热线：4000-0000-0000</span> |
+            <span><img src="../../images/weibo.jpg"></span> |
+            <span><img src="../../images/weibo.jpg"></span>
+        </div>
+        <div class="top-header-right-part">
+            <span><a href="../../views/information/about-us.html">关于我们</a></span> |
+            <span><a href="../../views/information/help-center.html">帮助中心</a></span>
+        </div>
+    </div>
+</header>
+<div class="normal-container bg-white">
+    <div class="container header-box">
+        <div class="header-left-part">
+
+            <img src="../../images/weibo.jpg" class="logo">
+        </div>
+        <div class="header-right-part header-right-part">
+			<div class="pull-right">
+            	<input type="text" class="search-input">
+            	<a class="search-input-btn">搜索</a>
+			</div>
+        </div>
+<!--
+        <div class="header-right-part text-right">
+            <a class="member-login-btn mgr-10">会员登录</a>
+            <a class="labor-login-btn">劳工登录</a>
+
+        </div>
+-->
+    </div>
+</div>
+<div class="normal-container bg-primary">
+    <nav class="container">
+        <ul class="top-nav-list">
+          <% var menu = [
+				{
+					href:"../../views/index/index.html",
+					title:"首页",
+				},{
+					href:"../../views/index/index.html",
+					title:"资源信息中心",
+				},{
+					href:"../../views/index/index.html",
+					title:"商务交易中心",
+				},{
+					href:"../../views/index/index.html",
+					title:"风控管理中心",
+				},{
+					href:"../../views/index/index.html",
+					title:"劳工资源中心",
+				},{
+					href:"../../views/product-service/product-serve.html",
+					title:"产品和服务",
+				},{
+					href:"../../views/information/industry-information.html",
+					title:"资讯视窗",
+				}];
+			%>
+           <% for(var i = 0;i<7;i++){ %>
+			<% if(i == active) {%>
+         		 <li class="active"><a href='<%=menu[i]["href"]%>'><%=menu[i]["title"]%></a></li>
+           <% } else {%> 
+            	<li><a href='<%=menu[i]["href"]%>'><%=menu[i]["title"]%></a></li>
+            <% }} %>
+        </ul>
+
+    </nav>
+</div>

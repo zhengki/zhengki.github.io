@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+<%- include("../public/head.ejs",{
+title:"企业会员认证"
+}) %>
+<link rel="stylesheet" href="../../css/user/enterprise-aprove.css">
+
+
+</head>
+
+<body>
+<%- include("../public/header.ejs",{active:0}) %>
+    <div class="content">
+        <span class="layui-breadcrumb">
+            <a href="../../views/index/index.html">首页</a>
+            <a href="#">会员中心</a>
+        </span>
+        <div class="clearboth">
+            <%- include("../public/sideBarLeft.ejs",{active:[0,1]}) %>
+            <div class="sideBarRight pull-left">
+                <div class="talk-nav">
+                    <span class="active first"><a href="#">企业会员认证</a></span>
+                </div>
+                <div class="project">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item duty">
+                            <label class="layui-form-label"><span class="font-red">*</span>营业执照:</label>
+                            <div class="layui-input-block ">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请输入营业执照编号" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item duty">
+                            <label class="layui-form-label"><span class="font-red">*</span>营业执照扫描件:</label>
+                            <div class="layui-input-block images">
+                                <input type="file" class="hidden">
+                                <div><img src="../../images/blo_pic.png" alt=""></div>
+                                <button>选择文件</button>
+                            </div>
+                        </div>
+                        <div class="layui-form-item duty">
+                            <label class="layui-form-label"><span class="font-red">*</span>法定代表人:</label>
+                            <div class="layui-input-block ">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                            </div>
+                            <div >
+                                <a href="" class="font-red download">企业法定代表人身份证明扫描件模板下载</a>
+                            </div>
+                        </div>
+
+
+                        <div class="layui-form-item duty money">
+                            <label class="layui-form-label "><span class="font-red">*</span>近三年营业收入:</label>
+                           <div  class="money-item">
+                               <div class="layui-input-block year">
+                                   <input type="text" name="title" required  lay-verify="required" placeholder="2013年" autocomplete="off" class="layui-input year">
+                               </div>
+                               <div class="layui-input-block aa">
+                                   <select name="city" lay-verify="required">
+                                       <option value="">万元</option>
+                                       <option value="0">北京</option>
+                                       <option value="1">上海</option>
+                                       <option value="2">广州</option>
+                                       <option value="3">深圳</option>
+                                       <option value="4">杭州</option>
+                                   </select>
+                               </div>
+                           </div>
+                            <div  class="money-item">
+                                <div class="layui-input-block year">
+                                    <input type="text" name="title" required  lay-verify="required" placeholder="2014年" autocomplete="off" class="layui-input year">
+                                </div>
+                                <div class="layui-input-block aa">
+                                    <select name="city" lay-verify="required">
+                                        <option value="">万元</option>
+                                        <option value="0">北京</option>
+                                        <option value="1">上海</option>
+                                        <option value="2">广州</option>
+                                        <option value="3">深圳</option>
+                                        <option value="4">杭州</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div  class="money-item">
+                                <div class="layui-input-block year">
+                                    <input type="text" name="title" required  lay-verify="required" placeholder="2015年" autocomplete="off" class="layui-input year">
+                                </div>
+                                <div class="layui-input-block aa">
+                                    <select name="city" lay-verify="required">
+                                        <option value="">万元</option>
+                                        <option value="0">北京</option>
+                                        <option value="1">上海</option>
+                                        <option value="2">广州</option>
+                                        <option value="3">深圳</option>
+                                        <option value="4">杭州</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="layui-form-item duty thr">
+                            <label class="layui-form-label"><span class="font-red">*</span>营业收入证明:</label>
+                            <div class="layui-input-block images">
+                                <input type="file" class="hidden">
+                                <div><img src="../../images/blo_pic.png" alt=""></div>
+                                <div class="btn-down">
+                                    <button>选择文件</button>
+                                </div>
+                            </div>
+                            <div class="layui-input-block images">
+                                <input type="file" class="hidden">
+                                <div><img src="../../images/blo_pic.png" alt=""></div>
+                                <div class="btn-down">
+                                    <button>选择文件</button>
+                                </div>
+                            </div>
+                            <div class="layui-input-block images">
+                                <input type="file" class="hidden">
+                                <div><img src="../../images/blo_pic.png" alt=""></div>
+                                <div class="btn-down">
+                                    <button>选择文件</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item duty">
+                            <label class="layui-form-label"><span class="font-red">*</span>联系人:</label>
+                            <div class="layui-input-block ">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item duty">
+                            <label class="layui-form-label"><span class="font-red">*</span>职务证明:</label>
+                            <div class="layui-input-block images">
+                                <input type="file" class="hidden">
+                                <div><img src="../../images/blo_pic.png" alt=""></div>
+                                <button>选择文件</button>
+                            </div>
+                        </div>
+                        <div class="layui-form-item duty">
+                            <label class="layui-form-label"><span class="font-red">*</span>企业授权委托书:</label>
+                            <div class="layui-input-block images">
+                                <input type="file" class="hidden">
+                                <div><img src="../../images/blo_pic.png" alt=""></div>
+                                <button>选择文件</button>
+                            </div>
+                        </div>
+
+                        <div class="font-red">温馨提示:一旦平台认证通过，不可再修改认证资料。</div>
+                        <a href="" class="layui-btn">保存</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<%- include("../public/footer.ejs") %>
+</body>
+
+</html>

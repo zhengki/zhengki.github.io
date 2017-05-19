@@ -1,0 +1,116 @@
+@import "../index/index";
+body{
+  background-color: #eee;
+}
+.content {
+  width: 1172px;
+  margin: 10px auto 20px;
+  .breadcrumb {
+    background-color: #eee;
+    margin-bottom: 10px;
+  }
+  .money-lists{
+    width: 1132px;
+    height: 300px;
+    padding: 15px 20px;
+    background-color: #fff;
+    .list-item{
+      clear: both;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+    .list-left{
+      color: #959595;
+      width: 68px;
+
+     float: left;
+      margin-right: 40px;
+    }
+    .list-right{
+      float: left;
+      width: 1020px;
+      li{
+        float: left;
+        height: 30px;
+        line-height: 30px;
+       margin-right: 24px;
+      }
+      button{
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #1284E0;
+        border: none;
+        border-radius: 2px;
+        color: white;
+      }
+    }
+  }
+  .project-list{
+    margin-top: 20px;
+    background-color: #fff;
+    .list-title{
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      padding-left: 21px;
+      padding-right: 20px;
+      clear: both;
+      overflow: hidden;
+      .layui-btn{
+        float: right;
+        background-color: #1284E0;
+        margin-top: 5px;
+      }
+    }
+    .list-item{
+      height: 160px;
+      border-top: 1px solid #eee;
+      clear: both;
+      overflow: hidden;
+      img{
+        width: 224px;
+        height: 125px;
+        margin-top: 17px;
+        margin-left: 24px;
+        margin-right: 57px;
+        border: none;
+        float: left;
+      }
+      .list-details{
+        height: 125px;
+        width: 772px;
+        margin-top: 17px;
+        float: left;
+        div{
+          color: #999999;
+          span{
+            color: #333;
+          }
+          .font-red{
+            color: #F13325;
+            font-size: 18px;
+            margin-right: 80px;
+          }
+          .maright{
+            margin-right: 65px;
+          }
+        }
+        .details-title{
+          font-size: 18px;
+          color: #333;
+        }
+        div:nth-child(2){
+          margin-top: 28px;
+          margin-bottom: 28px;
+        }
+      }
+      .list-date{
+        float: left;
+        color: #A0A0A0;
+        margin-top: 17px;
+      }
+    }
+  }
+}

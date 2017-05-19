@@ -1,0 +1,46 @@
+<html>
+
+<%- include("../public/head.ejs",{
+title:"首页"
+}) %>
+<link rel="stylesheet" href="../../css/user/thr-reset-transpin.css">
+
+
+</head>
+
+<body>
+<%- include("../public/header.ejs",{
+		active:2
+	}) %>
+<div class="content">
+    <div class="breadcrumb">
+            <span class="layui-breadcrumb">
+                <a href="../../views/user/my-account.html">会员中心</a>
+                <a href="#">重置交易密码</a>
+            </span>
+    </div>
+    <div class="content-details">
+        <ul>
+            <li ><img src="../../images/icon_ste1.png" alt=""></li>
+            <li class="second"><img src="../../images/icon_ste2.png" alt=""></li>
+            <li ><img src="../../images/icon_ste3.png" alt=""></li>
+        </ul>
+        <div class="details">
+            <h1>恭喜您，交易密码重置成功！</h1>
+            <p>
+                <a href="../../views/user/my-account.html" class="layui-btn">进入会员中心</a>
+                <a href="../../views/index/index.html" class="layui-btn">返回首页</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<%- include("../public/footer.ejs") %>
+</body>
+
+</html>

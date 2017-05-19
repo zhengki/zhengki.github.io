@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<%- include("../public/head.ejs",{
+title:"首页"
+}) %>
+<link rel="stylesheet" href="../../css/user/reset-transpin.css">
+
+
+</head>
+
+<body>
+<%- include("../public/header.ejs",{
+		active:2
+	}) %>
+<div class="content">
+    <div class="breadcrumb">
+            <span class="layui-breadcrumb">
+                <a href="../../views/user/my-account.html">会员中心</a>
+                <a href="#">重置交易密码</a>
+            </span>
+    </div>
+    <div class="content-details">
+        <ul>
+            <li ><img src="../../images/icon_ste1.png" alt=""></li>
+            <li class="second"><img src="../../images/icon_ste2_no.png" alt=""></li>
+            <li ><img src="../../images/icon_ste3_no.png" alt=""></li>
+        </ul>
+        <div class="details">
+            <form action="" class="layui-form" >
+                <div class="layui-form-item phone">
+                    <label class="layui-form-label">手机号/邮箱:</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="输入您的手机号码/邮箱" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item validate">
+                    <label class="layui-form-label">验证码:</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="输入手机验证码" autocomplete="off" class="layui-input">
+                    </div>
+                    <a href="" class="layui-btn">获取验证码</a>
+                </div>
+                <a href="" class="layui-btn next">下一步</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<%- include("../public/footer.ejs") %>
+</body>
+
+</html>
