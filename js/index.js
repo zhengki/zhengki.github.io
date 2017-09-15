@@ -58,3 +58,6 @@ var app = {
 };
 
 app.initialize();
+document.querySelector("#btnn").onclick=function () {
+    alert(11111)
+}
