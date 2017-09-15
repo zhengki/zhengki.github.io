@@ -4,8 +4,7 @@ document.querySelector("#test").onclick=function () {
 document.querySelector("#test2").onclick=function () {
     alert('被点了')
 }
-document.querySelector("#test3").addEventListener("click",scanCode)
-function scanCode() {
+document.querySelector("#test3").addEventListener("click",function () {
     cordova.plugins.barcodeScanner.scan(
         function (result) {
             alert("We got a barcode\n" +
@@ -17,4 +16,4 @@ function scanCode() {
             alert("Scanning failed: " + error);
         }
     );
-}
+})
