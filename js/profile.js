@@ -1,8 +1,6 @@
-app.initialize(function(){
-    window.StatusBar.styleLightContent();
-});
 
-var session = getCookie('session');
+
+
 var loadingToast = null;
 
 //验证码
@@ -58,17 +56,6 @@ function resetVcodeTimer(){
     vcode_times = 5;
 }
 
-getProfile(function(data){
-    if(data.status == 'ok'){
-        var gender = data.data.gender
-        $("#gender-wrap input[type='radio']").eq(gender).prop('checked','true')
-        List_val.avatar.attr('src',data.data.avatar==''? 'img/default-avatar.jpg' : data.data.avatar );
-        List_val.nickname.text(data.data.nickname);
-        List_val.gender.text(gender == 0 ? '男' : '女');
-        List_val.mobile.text(data.data.mobile);
-        List_val.email.text(data.data.email  == '' ? '尚未设置邮箱' : data.data.email);
-    }
-});
 
 //截图初始化
 var pc = new PhotoClip('#set-avatar-box', {
@@ -313,57 +300,16 @@ for(item in List){
 /***
  * 获取用户信息
  */
-function getProfile(cb){
-    postFetch({
-        hostname:'http://pgmember.stargt.com.my/api.php',
-        service:'member',
-        action:'profile',
-        params:{
-            method:'get',
-            session:session,
-        },
-        success:function(data){
-            cb && cb(data)
-        }
-    })
-}
+
 /***
  * 更新用户头像
  */
-function updateAvatar(data){
-    postFetch({
-        hostname:'http://pgmember.stargt.com.my/api.php',
-        service:'member',
-        action:'profile',
-        params:{
-            session:session,
-            method:'updateAvatar',
-            avatar:data
-        },
-        success:function(data){
-            console.log(data)
-        }
-    })
-}
+
 
 /***
  * 更新用户名，性别
  */
-function updateInfo(data,cb){
-    var params = data;
-    params.method = 'updateInfo';
-    params.session = session;
-    postFetch({
-        hostname:'http://pgmember.stargt.com.my/api.php',
-        service:'member',
-        action:'profile',
-        params:params,
-        success:function(data){
-            console.log(data);
-            cb && cb(data)
-        }
-    })
-}
+
 /***
  * 更新手机号
  */
@@ -388,45 +334,6 @@ function updateMobile(data,cb){
 /***
  * 更新邮件
  */
-function updateEmail(data,cb){
-    postFetch({
-        hostname:'http://pgmember.stargt.com.my/api.php',
-        service:'member',
-        action:'profile',
-        params:{
-            session:session,
-            method:'updateEmail',
-            email:data.email,
-            vcode:data.vcode
-        },
-        success:function(data){
-            console.log(data);
-            cb && cb(data)
-        }
-    })
-}
-
-/***
- * 修改密码
- */
-function updatePassword(data,cb){
-    postFetch({
-        hostname:'http://pgmember.stargt.com.my/api.php',
-        service:'member',
-        action:'profile',
-        params:{
-            session:session,
-            method:'updatePassword',
-            oldpass:sha1(data.oldpass),
-            newpass1:sha1(data.newpass1),
-            newpass2:sha1(data.newpass2)
-        },
-        success:function(data){
-            console.log(data);
-            cb && cb(data)
-        }
-    })
-}
 
 
 
