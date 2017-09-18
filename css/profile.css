@@ -1,0 +1,69 @@
+html,body{
+    height: 100%;
+}
+.app:not(:first-of-type){
+    display: none;
+}
+.avatar{
+    width: 60px;
+    vertical-align: top;
+}
+a.weui-vcode-btn{
+    width: 110px;
+    text-align: center;
+}
+.weui-cell .weui-cell_vcode .weui-label{
+    width: 80px;
+}
+#avatar-wrap{
+    height: 100%;
+    position: relative;
+}
+
+#avatar-wrap .content{
+    background-color: #000;
+    padding-top: 0;
+}
+.set-page{
+    height: 100%;
+    position: relative;
+    display: none;
+}
+#set-avatar-box{
+    height: 100%;
+    background-color: #000;
+}
+
+.btn-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+    opacity: 0.7;
+    border-top: 1px solid #373737;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.btn-list a{
+    flex: 1;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+}
+.avatar-box{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.avatar-box img{
+    width: 100%;
+}
+.file-hidden{
+    display: none;
+}
