@@ -1,8 +1,6 @@
-app.initialize(function(){
-    window.StatusBar.styleLightContent();
-});
 
-var session = getCookie('session');
+
+// var session = getCookie('session');
 var loadingToast = null;
 
 //验证码
@@ -60,17 +58,7 @@ function resetVcodeTimer(){
     vcode_times = 5;
 }
 
-getProfile(function(data){
-    if(data.status == 'ok'){
-        var gender = data.data.gender
-        $("#gender-wrap input[type='radio']").eq(gender).prop('checked','true')
-        List_val.avatar.attr('src',data.data.avatar==''? 'img/default-avatar.jpg' : data.data.avatar );
-        List_val.nickname.text(data.data.nickname);
-        List_val.gender.text(gender == 0 ? '男' : '女');
-        List_val.mobile.text(data.data.mobile);
-        List_val.email.text(data.data.email  == '' ? '尚未设置邮箱' : data.data.email);
-    }
-});
+
 
 //截图初始化
 var pc = new PhotoClip('#set-avatar-box', {
@@ -335,38 +323,11 @@ for(item in List){
 /***
  * 获取用户信息
  */
-function getProfile(cb){
-    postFetch({
-        hostname:'http://pgmember.stargt.com.my/api.php',
-        service:'member',
-        action:'profile',
-        params:{
-            method:'get',
-            session:session,
-        },
-        success:function(data){
-            cb && cb(data)
-        }
-    })
-}
+//
 /***
  * 更新用户头像
  */
-function updateAvatar(data){
-    postFetch({
-        hostname:'http://pgmember.stargt.com.my/api.php',
-        service:'member',
-        action:'profile',
-        params:{
-            session:session,
-            method:'updateAvatar',
-            avatar:data
-        },
-        success:function(data){
-            console.log(data)
-        }
-    })
-}
+
 
 /***
  * 更新用户名，性别
