@@ -34,6 +34,18 @@ a.weui-vcode-btn{
     background-color: #000;
 }
 
+.rotate-box{
+    color: #fff;
+    padding-left: 15px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+}
+#restore{
+    visibility: hidden;
+}
 .btn-list{
     display: flex;
     align-items: center;

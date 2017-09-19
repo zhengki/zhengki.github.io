@@ -1,6 +1,8 @@
+app.initialize(function(){
+    window.StatusBar.styleLightContent();
+});
 
-
-
+var session = getCookie('session');
 var loadingToast = null;
 
 //验证码
@@ -15,6 +17,8 @@ var completeChange = $('.complete');
 //上传头像
 var setBtn = $('.setBtn');
 var cancelBtn = $('#cancelBtn');
+var rotateBtn = $('.rotate-btn');
+var restoreBtn = $('#restore');
 
 //profile 着陆列表
 var List = {
@@ -56,18 +60,30 @@ function resetVcodeTimer(){
     vcode_times = 5;
 }
 
+getProfile(function(data){
+    if(data.status == 'ok'){
+        var gender = data.data.gender
+        $("#gender-wrap input[type='radio']").eq(gender).prop('checked','true')
+        List_val.avatar.attr('src',data.data.avatar==''? 'img/default-avatar.jpg' : data.data.avatar );
+        List_val.nickname.text(data.data.nickname);
+        List_val.gender.text(gender == 0 ? '男' : '女');
+        List_val.mobile.text(data.data.mobile);
+        List_val.email.text(data.data.email  == '' ? '尚未设置邮箱' : data.data.email);
+    }
+});
 
 //截图初始化
 var pc = new PhotoClip('#set-avatar-box', {
     size:300,
     outputSize: 640,
+    rotateFree:false,
     // adaptive: ['85%'],
     file: '.file-hidden',
     view: '',
     ok: '#clipBtn',
-    lrzOption:{
-        width:300
-    },
+    // lrzOption:{
+    //     width:300
+    // },
     //裁剪图片的url地址,加载的图片必须要与本程序同源，如果图片跨域，则无法截图
     img: 'img/default-avatar.jpg',
     loadStart: function() {
@@ -80,8 +96,10 @@ var pc = new PhotoClip('#set-avatar-box', {
         //成功截图  base 64 处理回调
         $('.avatar-box').css('display','block');
         $('#avatar-wrap .navigation').css('display','flex');
-        $('#avatar-img')[0].src = dataURL;
+        $('#avatar-img').attr('src',dataURL);
         $('.set-page').css('display','none');
+        restoreBtn.css('visibility','hidden');
+        pc.clear();
     },
     fail: function(msg) {
         //截图失败
@@ -92,12 +110,29 @@ var pc = new PhotoClip('#set-avatar-box', {
 // 加载的图片必须要与本程序同源，否则无法截图
 // pc.load('img/default-avatar.jpg');
 
+//还原
+restoreBtn.on('touchstart',function () {
+    pc.rotate(0);
+    this.style.visibility = 'hidden';
+});
+
+
+//旋转图片
+var i = 0;
+rotateBtn.on('touchstart',function () {
+    i++;
+    var deg = -90*i;
+    pc.rotate(deg);
+    restoreBtn.css('visibility','visible');
+});
 
 //取消截图
 cancelBtn.on('touchstart',function () {
     $('.set-page').css('display','none');
     $('.avatar-box').css('display','block');
     $('#avatar-wrap .navigation').css('display','flex');
+    restoreBtn.css('visibility','hidden');
+    pc.clear();
 });
 
 //设置头像
@@ -107,7 +142,7 @@ setBtn.on('touchstart',function (e) {
         {
             label: '从手机相册选择',
             onClick: function () {
-                $('.file-hidden')[0].click();
+                $('.file-hidden').click();
                 $('.avatar-box').css('display','none');
                 $('#avatar-wrap .navigation').css('display','none');
                 $('.set-page').css('display','block');
@@ -300,16 +335,57 @@ for(item in List){
 /***
  * 获取用户信息
  */
-
+function getProfile(cb){
+    postFetch({
+        hostname:'http://pgmember.stargt.com.my/api.php',
+        service:'member',
+        action:'profile',
+        params:{
+            method:'get',
+            session:session,
+        },
+        success:function(data){
+            cb && cb(data)
+        }
+    })
+}
 /***
  * 更新用户头像
  */
-
+function updateAvatar(data){
+    postFetch({
+        hostname:'http://pgmember.stargt.com.my/api.php',
+        service:'member',
+        action:'profile',
+        params:{
+            session:session,
+            method:'updateAvatar',
+            avatar:data
+        },
+        success:function(data){
+            console.log(data)
+        }
+    })
+}
 
 /***
  * 更新用户名，性别
  */
-
+function updateInfo(data,cb){
+    var params = data;
+    params.method = 'updateInfo';
+    params.session = session;
+    postFetch({
+        hostname:'http://pgmember.stargt.com.my/api.php',
+        service:'member',
+        action:'profile',
+        params:params,
+        success:function(data){
+            console.log(data);
+            cb && cb(data)
+        }
+    })
+}
 /***
  * 更新手机号
  */
@@ -334,6 +410,45 @@ function updateMobile(data,cb){
 /***
  * 更新邮件
  */
+function updateEmail(data,cb){
+    postFetch({
+        hostname:'http://pgmember.stargt.com.my/api.php',
+        service:'member',
+        action:'profile',
+        params:{
+            session:session,
+            method:'updateEmail',
+            email:data.email,
+            vcode:data.vcode
+        },
+        success:function(data){
+            console.log(data);
+            cb && cb(data)
+        }
+    })
+}
+
+/***
+ * 修改密码
+ */
+function updatePassword(data,cb){
+    postFetch({
+        hostname:'http://pgmember.stargt.com.my/api.php',
+        service:'member',
+        action:'profile',
+        params:{
+            session:session,
+            method:'updatePassword',
+            oldpass:sha1(data.oldpass),
+            newpass1:sha1(data.newpass1),
+            newpass2:sha1(data.newpass2)
+        },
+        success:function(data){
+            console.log(data);
+            cb && cb(data)
+        }
+    })
+}
 
 
 
