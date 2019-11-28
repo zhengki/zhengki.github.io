@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", function() {
+	console.log()
 	loading();
 	fangxiangpan();
 	playMusic();
