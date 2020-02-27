@@ -1,1 +1,66 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title></title><script src=//cdn.bootcss.com/eruda/1.5.2/eruda.min.js></script><script>eruda.init();</script><link href=/static/css/app.bcd740b3f57bae20fe91a03e194a5d03.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.fc97f753e13e637a8cd31582773064357.js></script><script type=text/javascript src=/static/js/vendor.1b52170b03cd48b5595c1582773064357.js></script><script type=text/javascript src=/static/js/app.58b908d683343290574b1582773064357.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.5.2/lib/index.css">
+
+    <!-- 引入 Vue 和 Vant 的 JS 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.5.2/lib/vant.min.js"></script>
+    <style>
+        html,body{
+            height:100%;
+            background: #f5f5f5;
+        }
+        .content{
+            margin: 10px 0;
+            background: #fff;
+        }
+        .one{
+            height: 100vh;
+        }
+        .two{
+            height: 70vh;
+        }
+        .three{
+            height: 50vh;
+        }
+        .four{
+            height: 20vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <van-tabs v-model="active" sticky scrollspy >
+            <van-tab title="标签 1">
+                <div class="content one">内容 1</div>
+            </van-tab>
+            <van-tab title="标签 2">
+                <div class="content two">内容 2</div>
+            </van-tab>
+            <van-tab title="标签 3">
+                <div class="content three">内容 3</div>
+            </van-tab>
+            <van-tab title="标签 4">
+                <div class="content four">内容 4</div>
+            </van-tab>
+          </van-tabs>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            active: 0
+        }
+    })
+</script>
+
+</html>
