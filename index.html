@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <input type="file" multiple>
-  <div id='test'></div>
-  <div>
-    <button onclick="test()">存储</button>
-  </div>
-</body>
-<script>
-  // var test = 'aaa'
-  // localStorage.setItem('test', '我是原本的数据')
-  var str = localStorage.getItem('test')
-  // if (!str) {
-  //   str = '我是'
-  // }
-  document.querySelector('#test').innerHTML = str || '未存储有数据'
-
-  function test() {
-    localStorage.setItem('test', '我是存储的数据')
-    var newStr = localStorage.getItem('test')
-    document.querySelector('#test').innerHTML = newStr
-  }
-</script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1503935_umtomb245uf.css">
+    <title>团队管理</title>
+  <link href="/js/app.a0bdc1dd0bd4642c5b4e.js" rel="preload" as="script"><link href="/js/chunk-vendors.c0889e733b0214adb927.js" rel="preload" as="script"></head>
+  <body>
+    <noscript>
+      <strong>We're sorry but team doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="/js/chunk-vendors.c0889e733b0214adb927.js"></script><script type="text/javascript" src="/js/app.a0bdc1dd0bd4642c5b4e.js"></script></body>
 </html>
