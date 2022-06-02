@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>融资讯APP用户服务协议</title>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width"/>
+        <meta name="format-detection" content="telephone=no" />
+        
+        <link href="./static/css/index.css?6a6fe18c0c3dfb219d2f" rel="stylesheet"/>
+        
+        
+        
+        
+    </head>
+    <body>
+        <div id="root"></div>
+        
+        <!-- built files will be auto injected -->
+        
+        <script type="text/javascript" src="./static/js/manifest.js?bc3f13aff3cd0bedeb3d"></script>
+        
+        <script type="text/javascript" src="./static/js/vendor.js?87de74bc60b2d9b086a4"></script>
+        
+        <script type="text/javascript" src="./static/js/index.js?6a6fe18c0c3dfb219d2f"></script>
+        
+    </body>
+</html>
