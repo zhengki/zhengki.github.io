@@ -1,24 +1,13 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-        <script src="https://s.url.cn/qqun/qun/qqweb/m/qun/confession/js/vconsole.min.js "></script>
-    </head>
-    <body>
-        <div>测试一下</div>
-        <script>
-            const tg = window.Telegram.WebApp;
-            console.log('tg', tg.safeAreaInset);
-            tg.expand();
-            // 你可以根据需要调用其他方法,例如关闭按钮的处理
-            tg.MainButton.setText('关闭页面')
-                .show()
-                .onClick(() => {
-                    tg.close();
-                });
-        </script>
-    </body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<div id="root"></div>
+<script src="/umi.js"></script>
+<script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+</body>
 </html>
