@@ -18,6 +18,19 @@
         r.appendChild(e);
     })(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6420418);
       </script>
+      <!-- Install this snippet AFTER the Tracking code. -->
+<script>
+var userId = Math.random * new Date().getTime(); // Replace your_user_id with your own if available.
+window.hj('identify', userId, {
+    // Add your own custom attributes here. Some EXAMPLES:
+    'name': '测试用户_' + userId, // Signup date in ISO-8601 format.
+    'remark': '备注_' + userId, // Signup date in ISO-8601 format.
+    // 'Last purchase category': 'Electronics', // Send strings with quotes around them.
+    // 'Total purchases': 15, // Send numbers without quotes.
+    // 'Last purchase date': '2019-06-20Z', // Send dates in ISO-8601 format.
+    // 'Last refund date': null, // Send null when no value exists for a user.
+});
+</script>
 <script src="/preload_helper.531b5b1e.js"></script>
 </head>
 <body>
