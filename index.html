@@ -20,7 +20,7 @@
       </script>
       <!-- Install this snippet AFTER the Tracking code. -->
 <script>
-var userId = Math.random * new Date().getTime(); // Replace your_user_id with your own if available.
+var userId = Math.random() * new Date().getTime(); // Replace your_user_id with your own if available.
 window.hj('identify', userId, {
     // Add your own custom attributes here. Some EXAMPLES:
     'name': '测试用户_' + userId, // Signup date in ISO-8601 format.
@@ -30,6 +30,7 @@ window.hj('identify', userId, {
     // 'Last purchase date': '2019-06-20Z', // Send dates in ISO-8601 format.
     // 'Last refund date': null, // Send null when no value exists for a user.
 });
+console.log(hj,userId)
 </script>
 <script src="/preload_helper.531b5b1e.js"></script>
 </head>
