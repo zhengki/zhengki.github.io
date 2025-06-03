@@ -35,6 +35,13 @@ window.hj('identify', userId, {
         api_host: 'https://us.i.posthog.com',
         defaults: '2025-05-24',
         person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+        loaded: function (posthog) {
+          const a = Math.floor(Math.random(seed) * 101)
+        posthog.identify(a, {
+          email:a + '@example.com',
+          name: 'User_' +a,
+        }
+        )
     })
       </script>
 <script src="/preload_helper.a8547e8d.js"></script>
