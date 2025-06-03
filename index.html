@@ -36,6 +36,7 @@ window.hj('identify', userId, {
         defaults: '2025-05-24',
         person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
         loaded: function (posthog) {
+          const seed = new Date().getTime();
           const a = Math.floor(Math.random(seed) * 101)
             console.log('PostHog loaded', posthog.identify, a);
         posthog.identify(a, {
